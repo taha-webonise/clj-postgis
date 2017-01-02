@@ -1,14 +1,27 @@
 # clj-postgis
 
-A Clojure library designed to ... well, that part is up to you.
+[Postgis](http://www.postgis.net/) garnish for [Korma](https://github.com/korma/Korma).
+
+[![Clojars Project](https://img.shields.io/clojars/v/clj-postgis.svg)](https://clojars.org/clj-postgis)
 
 ## Usage
 
-FIXME
+Add clj-postgis as a dependency in your `project.clj` file.
+
+`[clj-postgis "0.0.1-SNAPSHOT"]`
+
+There's just one macro named `st` available which takes a function name with args and alias.
+
+### Examples:
+
+```clojure
+(select city
+    (st (as-geojson :city.geom) :city_geom))
+```
 
 ## License
 
-Copyright © 2016 FIXME
+Copyright © 2017 FIXME
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
